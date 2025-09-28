@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // This block must be at the top of each JS file using Firebase
+    
 
-    const firebaseConfig = {
-  apiKey: "AIzaSyBhFOb88bfU3aLJO_DdAn6Uawbndk1WUQg",
+     const firebaseConfig = {
+//   apiKey: secuity concern
   authDomain: "insta-food-app.firebaseapp.com",
   projectId: "insta-food-app",
   storageBucket: "insta-food-app.firebasestorage.app",
@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 };
 
 
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 
-// You can now initialize the services you need in that file
+
 const auth = firebase.auth();
 
     
     const userArea = document.getElementById('user-area');
 
-    // Use Firebase's recommended observer to check auth state
+    
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             // User is signed in

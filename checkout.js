@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Firebase Initialization (Must be at the top) ---
-   const firebaseConfig = {
-  apiKey: "AIzaSyBhFOb88bfU3aLJO_DdAn6Uawbndk1WUQg",
+
+     const firebaseConfig = {
+//   apiKey: secuity concern
   authDomain: "insta-food-app.firebaseapp.com",
   projectId: "insta-food-app",
   storageBucket: "insta-food-app.firebasestorage.app",
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const auth = firebase.auth();
     const db = firebase.firestore();
 
-    // --- Get HTML Elements ---
+    //Get HTML Elements
     const confirmOrderBtn = document.getElementById('confirm-order-btn');
     const checkoutTotalElement = document.getElementById('checkout-total');
     
-    // --- Calculate and Display Total ---
+    // Calculate Total 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     let totalPrice = 0;
     cart.forEach(item => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     checkoutTotalElement.textContent = `Total: ₹${totalPrice.toFixed(2)}`;
 
-    // --- Confirm Order Logic ---
+    // --- Confirm Order 
   confirmOrderBtn.addEventListener('click', () => {
     const user = auth.currentUser;
 
@@ -51,17 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
         userName: user.displayName,
         userEmail: user.email,
         address: deliveryAddress,
-        items: cart, // The cart data
+        items: cart, 
         total: totalPrice.toFixed(2),
         paymentMethod: 'Cash on Delivery',
         status: 'Pending',
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     };
 
-    // This is the new line. It will show us the data in the console.
+    
     console.log("Data being sent to Firestore:", newOrder);
 
-    // The code then attempts to save this data
+    
     db.collection('orders').add(newOrder)
         .then(() => {
             localStorage.removeItem('cart');

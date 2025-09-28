@@ -74,8 +74,8 @@ body {
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 20px; /* Controls spacing between nav items */
-    flex-wrap: wrap; /* Allows nav items themselves to wrap */
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .nav-link {

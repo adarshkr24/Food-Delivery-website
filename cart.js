@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Firebase configuration 
-    const firebaseConfig = {
-  apiKey: "AIzaSyBhFOb88bfU3aLJO_DdAn6Uawbndk1WUQg",
+       const firebaseConfig = {
+//   apiKey: secuity concern
   authDomain: "insta-food-app.firebaseapp.com",
   projectId: "insta-food-app",
   storageBucket: "insta-food-app.firebasestorage.app",

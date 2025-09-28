@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const auth = firebase.auth();
     const db = firebase.firestore();
 
-    // --- Get HTML Elements ---
+    
     const userArea = document.getElementById('user-area');
     const ordersContainer = document.getElementById('orders-container');
 
-    // --- Firebase Authentication Logic ---
+   
     auth.onAuthStateChanged(user => {
         if (user) {
-            // User is signed in, update header and fetch their orders
+          
             const userName = user.displayName || 'User';
             if (userArea) {
                 userArea.innerHTML = `
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // Fetch orders for the logged-in user
+            
             fetchUserOrders(user.uid);
 
         } else {
-            // User is signed out
+           
             if (userArea) {
                 userArea.innerHTML = `<a href="login.html" class="btn">Login</a>`;
             }
@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Function to fetch and display orders from Firestore ---
+    
     function fetchUserOrders(userId) {
-        if (!ordersContainer) return; // Only run if on the orders page
+        if (!ordersContainer) return; 
         ordersContainer.innerHTML = '<p>Loading your orders...</p>';
 
         db.collection('orders')
-          .where('userId', '==', userId)   // Query for orders that match the user's ID
-          .orderBy('timestamp', 'desc')   // Show the most recent orders first
+          .where('userId', '==', userId)   
+          .orderBy('timestamp', 'desc')   
           .get()
           .then(querySnapshot => {
               if (querySnapshot.empty) {
@@ -71,14 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   return;
               }
               
-              ordersContainer.innerHTML = ''; // Clear loading message
+              ordersContainer.innerHTML = ''; 
               querySnapshot.forEach(doc => {
                   const order = doc.data();
                   
                   const orderCard = document.createElement('div');
-                  orderCard.className = 'cart-summary'; // Reuse existing style
+                  orderCard.className = 'cart-summary'; 
                   
-                  // Create a list of items for this order
+                  
                   let itemsHtml = order.items.map(item => `
                     <div class="order-item">
                         <img src="${item.image}" alt="${item.name}">
