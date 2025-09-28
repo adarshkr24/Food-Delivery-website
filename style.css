@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+     background-image: url(https://img.freepik.com/free-photo/grilled-hamburger-meal-with-fries-cheese-generative-ai_188544-8488.jpg?semt=ais_hybrid&w=740&q=80);
+     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #333;  
+}
+
+
+.container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+.welcome-section{
+    text-align: center;
+    padding: 125px 100px;
+    color: rgb(237, 237, 237);
+    
+    background-color: rgba(4, 4, 4, 0.284);
+    border-radius: 10px;
+    margin: 0%;
+}
+.welcome-section h1 {
+     font-weight: bold;
+    background-color: #f3f4f3;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+
+/* --- START: Navbar CSS --- */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px; 
+}
+    
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+     font-weight: bold;
+    background: linear-gradient(to right, #d22a2ab5, #389dcf);
+    -webkit-background-clip: text; 
+    background-color: #f3f4f3;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-family: sans-serif;
+    
+}
+.logosub{
+    font-size: 24px;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Controls spacing between nav items */
+    flex-wrap: wrap; /* Allows nav items themselves to wrap */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+#search-box {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+
+
+.btn {
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn:hover {
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: aquamarine;
+    color: rgb(18, 15, 15);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.containersub {
+    display: flex; 
+    align-content: center;
+     justify-content: center;
+    
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #3333339e;
+    width: max-content;
+    margin-top: 90px;
+    /* margin: auto; */
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#google-signin-btn:hover{
+    background-color: rgb(115, 176, 209);
+    
+}
+
+
+/* Main Content */
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: whitesmoke;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 90px;
+    background-color: #343a40;
+    color: white;
+}
+
+
+
+
+/* Food Card Styles */
+.food-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    flex-grow: 1;
+}
+
+.card-content .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 20px;
+}
+
+.btn-cart {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 100%;
+}
+
+
+
+
+
+
+/* Cart & Order Page Styles */
+.cart-summary {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    
+}
+
+.cart-summary h3 {
+    margin-top: 0;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #ffffff;
+    width:500px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.order-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+
+
+/* Quantity Controller Styles */
+.quantity-controller {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    font-size: 100%;
+}
+
+.quantity-controller button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quantity-controller .quantity {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+
+.address-form{
+    
+
+    
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #3333339e;
+    width: max-content;
+    margin-top: 90px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Insta Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css"> </head>
+<body>
+    <header class="navbar">
+        <div class="container">
+             <div>
+            <a href="index.html" class="logo">Insta Food </a>
+            <a class="logosub">🍔</a>
+        </div>
+        </div>
+    </header>
+
+    <main class="containersub">
+        <div class="auth-container">
+            <form id="login-form">
+                <h2 style="color:whitesmoke ; background-color: rgba(97, 78, 52, 0.515);width: max-content;">Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <form id="signup-form">
+                <h2 style="color:whitesmoke ; background-color: rgba(97, 78, 52, 0.515);width: max-content;">Sign Up</h2>
+                <input type="text" id="signup-name" placeholder="Your Name" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password (min. 6 characters)" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="social-login">
+                <p style="color:whitesmoke ; background-color: rgba(97, 78, 52, 0.515);width: max-content;">or</p>
+                <button id="google-signin-btn" class="btn-social">
+                    <img src="https://www.gstatic.com/marketing-cms/assets/images/d5/dc/cfe9ce8b4425b410b49b7f2dd3f3/g.webp=s96-fcrop64=1,00000000ffffffff-rw" alt="Google Logo" style="width:15px;
+                    display: flexbox;"> Sign in with Google</button>
+                
+            </div>
+            <p id="error-message" class="error-text" style="color: rgb(232, 210, 210);"></p>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+    <script src="login.js"></script>
+</body>
+</html>

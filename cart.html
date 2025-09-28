@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Insta Food </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            
+             <div>
+            <a href="index.html" class="logo">Insta Food </a>
+            <a class="logosub">🍔</a>
+        </div>
+            <nav class="nav-items">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="orders.html" id="orders-link" class="nav-link">My Orders</a>
+                <div id="user-area">
+                    <a href="login.html" class="btn">Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title" >Your Shopping Cart</h2>
+        <div id="cart-items-container">
+            </div>
+        <div id="cart-summary" class="cart-summary">
+            </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Insta Food. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <script src="cart.js"></script>
+</body>
+</html>

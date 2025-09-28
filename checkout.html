@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div>
+            <a href="index.html" class="logo">Insta Food </a>
+            <a class="logosub">🍔</a>
+        </div>
+            <nav>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="cart.html" class="nav-link">Back to Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="checkout-container">
+            <h2 class="section-title">Checkout</h2>
+
+            <div class="address-form">
+                <h3 style="color: white;">Delivery Address</h3>
+                <form id="address-form">
+                    <input type="text" id="street-address" placeholder="Street Address" required>
+                    <br>
+                    <input type="text" id="city" placeholder="City" required>
+                    <br>
+                    <input type="text" id="pincode" placeholder="Pincode" required>
+                    <br>
+                    <input type="text" id="phone" placeholder="Phone number" required>
+                </form>
+            </div>
+
+            <div class="cart-summary">
+                <h3 id="checkout-total">Calculating Total...</h3>
+                <h3>Payment Method: Cash on Delivery</h3>
+                <p>Your order will be placed and you can pay upon its arrival.</p>
+                <button id="confirm-order-btn" class="btn">Confirm Order</button>
+            </div>
+        </div>
+    </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script> <script src="checkout.js"></script>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
